@@ -18,6 +18,7 @@
              @focus="handleFocus"
              @blur="handleBlur"
              @click.native="handleClick"
+             @change="handleChange"
              :multiple-limit="limit"
              :allow-create="allowCreate"
              :default-first-option="defaultFirstOption"

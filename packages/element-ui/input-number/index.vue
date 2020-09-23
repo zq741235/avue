@@ -4,6 +4,8 @@
                    @click.native="handleClick"
                    @focus="handleFocus"
                    @blur="handleBlur"
+                   @input="handleInput"
+                   @change="handleChange"
                    :precision="precision"
                    :placeholder="placeholder"
                    :size="size"

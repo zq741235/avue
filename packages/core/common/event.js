@@ -35,6 +35,9 @@ export default function () {
       handleClick (event) {
         bindEvent(this, 'click', event)
       },
+      handleInput (value){
+        this.$emit('input', value);
+      },
       handleChange (value) {
         let result = value;
         if (this.isString || this.isNumber || this.stringMode || this.listType === "picture-img") {

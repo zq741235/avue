@@ -12,7 +12,8 @@
              :width="len"
              :disabled="disabled"
              :readonly="readonly"
-             :size="size"></el-switch>
+             :size="size"
+             @change="handleChange"></el-switch>
 </template>
 
 <script>
