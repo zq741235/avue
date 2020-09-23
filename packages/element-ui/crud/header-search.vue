@@ -7,6 +7,7 @@
                  v-if="flag"
                  @submit="searchChange"
                  @reset-change="resetChange"
+                 @change="formChange"
                  v-model="searchForm">
         <template slot="menuForm"
                   slot-scope="{size}">
@@ -186,6 +187,11 @@ export default cteate({
       //扩展搜索的相关api
       this.crud.searchChange = this.searchChange;
       this.crud.searchReset = this.searchReset;
+    },
+
+    // 搜索表单change回调
+    formChange (form, column) { 
+      this.crud.$emit("search-form-change", column); 
     },
     // 搜索回调
     searchChange (form, done) {

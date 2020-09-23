@@ -16,6 +16,8 @@
             :show-word-limit="showWordLimit"
             @focus="handleFocus"
             @blur="handleBlur"
+            @input="handleInput"
+            @change="handleChange"
             :disabled="disabled"
             :autocomplete="autocomplete">
     <template slot="prepend"

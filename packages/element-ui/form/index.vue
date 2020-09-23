@@ -426,9 +426,9 @@ export default create({
       let value = this.deepClone(this.formDefault.tableForm);
       this.setForm(this.deepClone(Object.assign(value, this.formVal)))
     },
-    setVal () {
+    setVal () { 
       this.$emit("input", this.form);
-      this.$emit("change", this.form);
+      // this.$emit("change", this.form);
     },
     //表单赋值
     setForm (value) {
@@ -502,7 +502,8 @@ export default create({
         html: this.$el.innerHTML
       });
     },
-    propChange (option, column) {
+    propChange (option, column) { 
+      this.$emit("change", this.form,column);
       if (column.cascader) this.handleChange(option, column)
     },
     handleMock () {

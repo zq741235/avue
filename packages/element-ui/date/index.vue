@@ -18,6 +18,7 @@
                     @blur="handleBlur"
                     @focus="handleFocus"
                     @click.native="handleClick"
+                    @change="handleChange"
                     :disabled="disabled"></el-date-picker>
   </div>
 </template>

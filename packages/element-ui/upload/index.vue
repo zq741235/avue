@@ -207,7 +207,14 @@ export default create({
     }
   },
   created () { },
-  watch: {},
+ 
+  watch: {
+    text: {
+      handler (n, o) { 
+        this.handlerInput(n)
+      }
+    },
+  },
   mounted () { },
   methods: {
     handleClick () {
