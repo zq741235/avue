@@ -13,6 +13,7 @@
                :separator="separator"
                :disabled="disabled"
                :collapse-tags="tags"
+               @change="handleChange"
                @click.native="handleClick">
     <template slot-scope="{ node, data }">
       <slot :name="prop+'Type'"

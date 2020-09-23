@@ -148,11 +148,12 @@ export default function () {
       }
     },
     watch: {
-      text: {
-        handler (n, o) {
-          this.handleChange(n)
-        }
-      },
+      // text: {
+      //   handler (n, o) {
+      //     // this.handleChange(n)
+      //     this.handlerInput(n)
+      //   }
+      // },
       value: {
         handler (n, o) {
           this.initVal();

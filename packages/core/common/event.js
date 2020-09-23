@@ -37,6 +37,9 @@ export default function () {
           this.click({ value: result, column: this.column });
         }
       },
+      handleInput (value){
+        this.$emit('input', value);
+      },
       handleChange (value) {
         let result = value;
         if (this.$AVUE.ui.name == 'antd') {
