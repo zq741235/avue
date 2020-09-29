@@ -141,7 +141,8 @@ export default {
       }
 
     },
-    handleChange (val) {
+    handleChange (val) { 
+      this.$emit('input', val)
       this.$emit('change', val)
     }
   }
