@@ -1,5 +1,5 @@
 {
-  "name": "@smallwei/avue",
+  "name": "@zq741235/avue",
   "version": "2.6.17",
   "description": "A Magic Configurable Web Framework",
   "main": "lib/avue.min.js",
