@@ -5,7 +5,7 @@
              status-icon
              @submit.native.prevent
              :model="form"
-             :label-suffix="parentOption.labelSuffix || ':'"
+             :label-suffix="parentOption.labelSuffix"
              :size="$AVUE.formSize || controlSize"
              :label-position="parentOption.labelPosition"
              :label-width="setPx(parentOption.labelWidth,labelWidth)"
@@ -426,7 +426,7 @@ export default create({
       let value = this.deepClone(this.formDefault.tableForm);
       this.setForm(this.deepClone(Object.assign(value, this.formVal)))
     },
-    setVal () { 
+    setVal () {
       this.$emit("input", this.form);
       // this.$emit("change", this.form);
     },
@@ -502,7 +502,7 @@ export default create({
         html: this.$el.innerHTML
       });
     },
-    propChange (option, column) { 
+    propChange (option, column) {
       this.$emit("change", this.form,column);
       if (column.cascader) this.handleChange(option, column)
     },

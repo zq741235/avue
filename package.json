@@ -1,6 +1,10 @@
 {
   "name": "@zq741235/avue",
+<<<<<<< HEAD
   "version": "2.7.1-0",
+=======
+  "version": "2.6.17-1",
+>>>>>>> feat: 去掉冒号
   "description": "A Magic Configurable Web Framework",
   "main": "lib/avue.min.js",
   "unpkg": "lib/avue.min.js",
