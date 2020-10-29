@@ -72,6 +72,11 @@
                 <avue-rate disabled
                            v-model="scope.row[column.prop]" />
               </span>
+              <span v-else-if="['tag'].includes(column.columnType)">
+                <el-tag :type="handleTagType(scope.row,column,crud.DIC[column.prop])">
+                  {{handleShowLabel(scope.row,column,crud.DIC[column.prop])}}
+                </el-tag>
+              </span>
               <span v-else
                     v-html="handleDetail(scope.row,column,crud.DIC[column.prop])"></span>
             </template>
@@ -169,6 +174,13 @@ export default {
       if (!this.validatenull(DIC)) {
         result = detail(row, column, this.tableOption, DIC);
         row["$" + column.prop] = result;
+      }
+      return result;
+    },
+    handleTagType (row, column, DIC) {
+      let result = "";
+      if (!this.validatenull(DIC)) {
+        result = (DIC.find(item=>item.value===row[column.prop])||{}).tagType
       }
       return result;
     },
