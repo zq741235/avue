@@ -1,8 +1,7 @@
 <template>
   <div :class="[b(),{'avue--view':isView,'avue--detail':isDetail}]"
        :style="{width:setPx(parentOption.formWidth,'100%')}">
-    <el-form ref="form"
-             status-icon
+    <el-form ref="form" 
              @submit.native.prevent
              :model="form"
              :label-suffix="parentOption.labelSuffix"
