@@ -73,7 +73,7 @@
                            v-model="scope.row[column.prop]" />
               </span>
               <span v-else-if="['tag'].includes(column.columnType)">
-                <el-tag :type="handleTagType(scope.row,column,crud.DIC[column.prop])">
+                <el-tag :type="handleTagType(scope.row,column,crud.DIC[column.prop])"  size="mini">
                   {{handleShowLabel(scope.row,column,crud.DIC[column.prop])}}
                 </el-tag>
               </span>
