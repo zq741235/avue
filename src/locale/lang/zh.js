@@ -57,7 +57,7 @@ export default {
     refreshBtn: '刷 新',
     printBtn: '打 印',
     excelBtn: '导 出',
-    updateBtn: '修 改',
+    updateBtn: '保 存',
     cancelBtn: '取 消',
     searchBtn: '搜 索',
     emptyBtn: '清 空',
