@@ -139,7 +139,9 @@ export default create({
       immediate: true
     }
   },
-  created () { },
+  created () {  
+    if (this.column.cascader) this.handleChange(this.value)
+  },
   mounted () {
     if (this.drag) {
       this.setSort()
